@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas;
+}
+body {
+  background-color: #641b4e;
+}
+section {
+  min-height: 100vh;
+  position: relative;
+  padding: 100px;
+  overflow: hidden;
+}
+section h2 {
+  position: fixed;
+  top: 30px;
+  color: #fff;
+  font-size: 2.7em;
+  font-weight: 700;
+  z-index: 1;
+}
+section .img {
+  position: absolute;
+  right: 60px;
+  top: 0;
+  width: 707px;
+  height: 100%;
+  background: url("download.jpg") no-repeat;
+  background-size: 100% 100%;
+  transition: 0.5s ease-in-out;
+}
+/*
+section .img img {
+  width: 100%;
+  height: 100%;
+}
+*/
+section .content {
+  position: absolute;
+  top: 0;
+  max-width: 800px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-right: 100px;
+}
+section .content h1 {
+  color: #fff;
+  font-size: 3.35em;
+  font-weight: 700;
+}
+section .content p {
+  color: #fff;
+  font-size: 1.1em;
+  margin: 20px 0;
+}
+section .content span:first-of-type {
+  color: #fff;
+  background-color: #f00;
+  padding: 10px 30px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+section .content span:last-of-type {
+  color: #fff;
+  position: absolute;
+  bottom: 30px;
+}
+section .menu {
+  position: fixed;
+  background-color: #f00;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+section .menu i {
+  color: #fff;
+  font-size: 2em;
+}
+section .menu i.fa-times {
+  display: none;
+}
+section .active i.fa-bars {
+  display: none;
+}
+section .active i.fa-times {
+  display: block;
+}
+section .slider {
+  position: absolute;
+  top: 0;
+  left: calc(100% - 60px);
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: 0.8s;
+}
+section .slider.active {
+  left: 0;
+}
+section .slider .links {
+  list-style: none;
+  position: relative;
+}
+section .slider .links li {
+  font-size: 3.5em;
+  text-align: center;
+  cursor: pointer;
+}
+section .slider .links li:hover {
+  color: #f00;
+}
+section .slider .social {
+  position: absolute;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  border-right: 1px solid rgb(209, 206, 206);
+  list-style: none;
+}
+section .slider .social li {
+  font-size: 2.5em;
+  margin: 15px 0;
+  cursor: pointer;
+}
+section .slider .social .fa-at {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-size: 0.6em;
+  color: rgb(119, 117, 117);
+}
+@media (max-width: 767px) {
+  section {
+    padding: 40px;
+  }
+  section h2 {
+    top: 20px;
+    font-size: 2.1em;
+    font-weight: 700;
+  }
+  section .img {
+    width: 100%;
+    right: 0;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+  section .content {
+    width: 85%;
+    margin-right: 0;
+  }
+  section .content h1 {
+    font-size: 2.6em;
+    font-weight: 700;
+  }
+  section .content p {
+    font-size: 1em;
+    margin: 20px 0;
+  }
+  section .content span:first-of-type {
+    padding: 10px 20px;
+    margin: 20px 0;
+  }
+  section .content span:last-of-type {
+    bottom: 20px;
+    font-size: 0.9em;
+  }
+  section .slider {
+    left: 100%;
+  }
+  section .slider .links li {
+    font-size: 2.8em;
+  }
+}
